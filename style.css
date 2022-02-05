@@ -1,0 +1,13 @@
+#canvas {
+  display: block;
+  margin: auto;
+  background-color: silver;
+}
+
+#table {
+  table-layout: fixed;
+}
+
+#black {
+  transform: scale(1, -1);
+}
