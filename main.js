@@ -1,8 +1,13 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.height = Math.min(window.innerWidth, window.innerHeight) - 30;
-canvas.width = canvas.height * 9 / 16;
+if (window.innerHeight < window.innerWidth) {
+  canvas.height = Math.min(window.innerWidth, window.innerHeight) - 30;
+  canvas.width = canvas.height * 9 / 16;
+} else {
+  canvas.height = Math.max(window.innerWidth, window.innerHeight) - 30;
+  canvas.width = canvas.height * 9 / 16;
+}
 const [WIDTH, HEIGHT] = [canvas.width, canvas.height];
 
 const FONT = 'ニタラゴルイカ等幅清音教育漢-08';
